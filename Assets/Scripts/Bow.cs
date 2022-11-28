@@ -15,10 +15,13 @@ namespace DefaultNamespace
         [Header("Camera")]
         [SerializeField] Camera m_playerCamera;
 
+        private float m_fov;
+
         private void Start()
         {
             StartCoroutine(CreateArrow(0.0f));
             m_pullValue = 0.0f;
+            m_fov = m_playerCamera.fieldOfView;
         }
 
         private void Update()
@@ -49,10 +52,14 @@ namespace DefaultNamespace
 
         public void Release()
         {
-            //Set FOV back to normal
-            if(m_pullValue > 0.25f)
-                FireArrow();
            
+            //Set FOV back to normal
+            if (m_pullValue > 0.25f)
+            {
+                FireArrow();
+                m_playerCamera.fieldOfView = m_fov;
+            }
+
             m_pullValue = 0.0f;
 
             if (!m_currentArrow)
