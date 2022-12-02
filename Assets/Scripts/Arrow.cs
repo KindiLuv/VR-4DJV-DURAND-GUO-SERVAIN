@@ -1,52 +1,88 @@
+﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
-public class Arrow : MonoBehaviour
+public class Arrow : XRGrabInteractable
 {
-    public float m_Speed = 2000.0f;
-    public Transform m_Tip;
-    
-    private Rigidbody m_rigidbody;
-    private bool m_isStopped;
-    private Vector3 m_lastPosition;
+    [SerializeField] private float speed = 2000.0f;
 
-    private void Awake()
+    private new Rigidbody rigidbody;
+    private ArrowCaster caster;
+
+    private bool launched = false;
+
+    private RaycastHit hit;
+
+    protected override void Awake()
     {
-        m_rigidbody = GetComponent<Rigidbody>();
+        base.Awake();
+        rigidbody = GetComponent<Rigidbody>();
+        caster = GetComponent<ArrowCaster>();
     }
 
-    private void FixedUpdate()
+    protected override void OnSelectExited(SelectExitEventArgs args)
     {
-        if (m_isStopped) return;
+        base.OnSelectExited(args);
 
-        m_rigidbody.MoveRotation(Quaternion.LookRotation(m_rigidbody.velocity, transform.up));
-
-        if (Physics.Linecast(m_lastPosition, m_Tip.position))
+        if (args.interactorObject is Notch notch)
         {
-            Stop();
+            if (notch.CanRelease)
+                LaunchArrow(notch);
+        }
+    }
+
+    private void LaunchArrow(Notch notch)
+    {
+        launched = true;
+        ApplyForce(notch.PullMeasurer);
+        StartCoroutine(LaunchRoutine());
+    }
+
+    private void ApplyForce(PullMeasurer pullMeasurer)
+    {
+        rigidbody.AddForce(transform.forward * (pullMeasurer.PullAmount * speed));
+    }
+
+    private IEnumerator LaunchRoutine()
+    {
+        // Set direction while flying
+        while (!caster.CheckForCollision(out hit))
+        {
+            SetDirection();
+            yield return null;
         }
 
-        m_lastPosition = m_Tip.position;
+        // Once the arrow has stopped flying
+        DisablePhysics();
+        ChildArrow(hit);
+        CheckForHittable(hit);
     }
 
-    private void Stop()
+    private void SetDirection()
     {
-        m_isStopped = true;
-
-        m_rigidbody.isKinematic = true;
-        m_rigidbody.useGravity = false;
-        
-        Debug.Log("");
+        if (rigidbody.velocity.z > 0.5f)
+            transform.forward = rigidbody.velocity;
     }
 
-    public void Fire(float pullValue)
+    private void DisablePhysics()
     {
-        m_isStopped = false;
-        transform.parent = null;
+        rigidbody.isKinematic = true;
+        rigidbody.useGravity = false;
+    }
 
-        m_rigidbody.isKinematic = false;
-        m_rigidbody.useGravity = true;
-        m_rigidbody.AddForce(transform.forward * (pullValue * m_Speed));
-        
-        Destroy(gameObject, 5.0f);
+    private void ChildArrow(RaycastHit hit)
+    {
+        transform.SetParent(hit.transform);
+    }
+
+    private void CheckForHittable(RaycastHit hit)
+    {
+        if (hit.transform.TryGetComponent(out IArrowHittable hittable))
+            hittable.Hit(this);
+    }
+
+    public override bool IsSelectableBy(IXRSelectInteractor interactor)
+    {
+        return base.IsSelectableBy(interactor) && !launched;
     }
 }
