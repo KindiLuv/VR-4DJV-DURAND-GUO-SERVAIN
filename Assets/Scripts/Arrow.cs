@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Arrow : MonoBehaviour
@@ -38,6 +34,8 @@ public class Arrow : MonoBehaviour
 
         m_rigidbody.isKinematic = true;
         m_rigidbody.useGravity = false;
+        
+        Debug.Log("");
     }
 
     public void Fire(float pullValue)

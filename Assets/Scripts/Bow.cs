@@ -41,13 +41,18 @@ namespace DefaultNamespace
             arrowObject.transform.localPosition = new Vector3(0.2f, 0, 0);
             arrowObject.transform.localEulerAngles = Vector3.zero;
 
+            arrowObject.transform.localPosition = new Vector3(0, 1, .5f);
+
             m_currentArrow = arrowObject.GetComponent<Arrow>();
         }
 
         public void Pull()
         {
             //Increase camera FOV when pulling
-            m_pullValue += 0.1f;
+            if (m_currentArrow)
+            {
+                m_pullValue += 0.1f;
+            }
         }
 
         public void Release()
