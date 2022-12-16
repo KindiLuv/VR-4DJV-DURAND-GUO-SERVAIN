@@ -1,27 +1,32 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Target : MonoBehaviour
+public class Target : MonoBehaviour, IArrowHittable
 {
-    // Start is called before the first frame update
-    void Start()
+    public float forceAmount = 1.0f;
+    public Material otherMaterial = null;
+
+    public void Hit(Arrow arrow)
     {
-        
+        ApplyMaterial();
+        ApplyForce(arrow);
+        DisableCollider(arrow);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ApplyMaterial()
     {
-        
+        if (TryGetComponent(out MeshRenderer meshRenderer))
+            meshRenderer.material = otherMaterial;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void ApplyForce(Arrow arrow)
     {
-        if (other.CompareTag("Arrow"))
-        {
-            Destroy(this);
-        }
+        if (TryGetComponent(out Rigidbody rigidbody))
+            rigidbody.AddForce(arrow.transform.forward * forceAmount);
+    }
+
+    private void DisableCollider(Arrow arrow)
+    {
+        if (arrow.TryGetComponent(out Collider collider))
+            collider.enabled = false;
     }
 }
