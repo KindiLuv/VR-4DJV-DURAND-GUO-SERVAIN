@@ -2,11 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bf7c9d9-aa2a-4ca3-95cb-2af42531e8b2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewPrefabs.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewPrefabs.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Target.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VR-4DJV-DURAND-GUO-SERVAIN/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR-4DJV-DURAND-GUO-SERVAIN/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day1.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day1.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day2.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day2.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day3.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day3.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day4.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day4.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day5.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day5.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day6.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day6.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day7.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Day7.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Morning1.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Morning1.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Morning2.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Morning2.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Morning3.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Morning3.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Morning4.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Morning4.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Night1.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Night1.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Night2.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Night2.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Night3.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Night3.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Night4.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Night4.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Sunset1.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Sunset1.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Sunset2.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Sunset2.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Sunset3.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Sunset3.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Sunset4.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Sunset4.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Sunset5.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Materials/Sunset5.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Shaders.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Shaders.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Shaders/Stylized Sky.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Customizable Skybox/Stylized Sky/Shaders/Stylized Sky.shader.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/XR/Settings/OpenXR Package Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +48,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@2.2.0/Runtime/Inputs/InputActionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/VR-4DJV-DURAND-GUO-SERVAIN/ProjectSettings/ShaderGraphSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/VR-4DJV-DURAND-GUO-SERVAIN/ProjectSettings/ShaderGraphSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/VR-4DJV-DURAND-GUO-SERVAIN/ProjectSettings/ShaderGraphSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,7 +68,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Program Files\unity\Editor\2021.3.10f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\Cours 2022-2023\Prog JV\Unity\VR-4DJV-DURAND-GUO-SERVAIN&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Cours 2022-2023\Prog JV\Unity\VR-4DJV-DURAND-GUO-SERVAIN" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -77,7 +99,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e6c9b15b-f760-4deb-9e09-e06d7f146121" name="Changes" comment="" />
+      <changelist id="1bf7c9d9-aa2a-4ca3-95cb-2af42531e8b2" name="Changes" comment="" />
       <created>1667817096123</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -86,6 +108,8 @@
       <workItem from="1667817291905" duration="2205000" />
       <workItem from="1669728043113" duration="1304000" />
       <workItem from="1670325737318" duration="540000" />
+      <workItem from="1672582597565" duration="3187000" />
+      <workItem from="1672650885482" duration="4439000" />
     </task>
     <servers />
   </component>
