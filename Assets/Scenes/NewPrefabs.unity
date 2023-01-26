@@ -1179,8 +1179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 376909709}
-  m_Colliders:
-  - {fileID: 1054709466}
+  m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1269,6 +1268,7 @@ GameObject:
   - component: {fileID: 1333760755}
   - component: {fileID: 1333760754}
   - component: {fileID: 1333760753}
+  - component: {fileID: 1333760756}
   m_Layer: 0
   m_Name: Locomotion System
   m_TagString: Untagged
@@ -1322,7 +1322,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_RightHandSnapTurnAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Right Hand Snap Turn
       m_Type: 0
@@ -1332,7 +1332,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 7548121251230507023, guid: bbea90f023e263243bfb52f828a97b02,
+      type: 3}
 --- !u!114 &1333760754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1361,6 +1362,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 395298486}
+--- !u!114 &1333760756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333760751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10bf45ab494df0840867fbad4e7061ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionAsset: {fileID: -944628639613478452, guid: bbea90f023e263243bfb52f828a97b02,
+    type: 3}
+  rayInteractor: {fileID: 1513145808}
+  provider: {fileID: 1333760754}
 --- !u!1 &1349930305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,7 +1582,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1513145807}
   - component: {fileID: 1513145810}
-  - component: {fileID: 1513145809}
   - component: {fileID: 1513145808}
   - component: {fileID: 1513145812}
   - component: {fileID: 1513145811}
@@ -1705,19 +1721,6 @@ MonoBehaviour:
   m_TranslateSpeed: 1
   m_AnchorRotateReferenceFrame: {fileID: 0}
   m_AnchorRotationMode: 0
---- !u!135 &1513145809
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513145806}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1513145810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1732,7 +1735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
-  m_EnableInputActions: 1
+  m_EnableInputActions: 0
   m_ModelPrefab: {fileID: 7660398271987871413, guid: 9e4d4d7f9cf4f6049ac52f5fc53031c4,
     type: 3}
   m_ModelParent: {fileID: 0}
@@ -1950,7 +1953,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_ValidColorGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0, g: 1, b: 0, a: 1}
     key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
@@ -2063,7 +2066,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 60ad58a7ff39d794ea82a9be006add12, type: 2}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2134,8 +2137,8 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
+    numCornerVertices: 4
+    numCapVertices: 4
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
