@@ -963,6 +963,20 @@
                     "action": "Turn",
                     "isComposite": false,
                     "isPartOfComposite": false
+<<<<<<< Updated upstream
+=======
+                },
+                {
+                    "name": "",
+                    "id": "05d897fe-db18-4669-8230-fadd1d701668",
+                    "path": "<XRController>{RightHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+>>>>>>> Stashed changes
                 }
             ]
         }
