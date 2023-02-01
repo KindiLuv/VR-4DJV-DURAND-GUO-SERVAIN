@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -8,18 +9,16 @@ public class GameManager : MonoBehaviour
     private int score;
     [SerializeField] private TextMeshProUGUI scoreText;
     private SwitchScene switchSceneScript;
-    public bool t;
-    public bool tt;
-    public bool ttt;
     [SerializeField] private TextMeshProUGUI TargetCounterText;
     private int TotaltargetNumber;
-    private int targetNumber;
+    public int targetNumber = 7;
 
-    private void Start()
+    private IEnumerator Start()
     {
         switchSceneScript = GetComponent<SwitchScene>();
         switchSceneScript.ChangeScene(1);
-        LoadTarget();
+        yield return new WaitUntil( () => switchSceneScript.init);
+        LoadTarget(7);
         syncUI();
     }
 
@@ -33,34 +32,32 @@ public class GameManager : MonoBehaviour
         TargetCounterText.text = targetNumber.ToString()+"/"+TotaltargetNumber.ToString();
     }
 
-    public void LoadTarget()
+    public void LoadTarget(int targetNb)
     {
-        TotaltargetNumber = FindObjectsOfType<ArcheryTarget>().Length;
+        TotaltargetNumber = targetNb;
         targetNumber = TotaltargetNumber;
         syncUI();
     }
 
     private void Update()
     {
-        if(t)
+        Debug.LogError(targetNumber);
+        if (targetNumber == 0)
         {
-            switchSceneScript.RemoveScene();
-            switchSceneScript.ChangeScene(2);
-            t = false;
-        }
-        
-        if(tt)
-        {
-            switchSceneScript.RemoveScene();
-            switchSceneScript.ChangeScene(3);
-            tt = false;
-        }
-        
-        if(ttt)
-        {
-            switchSceneScript.RemoveScene();
-            switchSceneScript.ChangeScene(4);
-            ttt = false;
+            Debug.LogError("target was 0");
+            switch (switchSceneScript.actualScene)
+            {
+                case 1:
+                    switchSceneScript.RemoveScene();
+                    switchSceneScript.ChangeScene(2);
+                    LoadTarget(5);
+                    break;
+                case 2:
+                    switchSceneScript.RemoveScene();
+                    switchSceneScript.ChangeScene(1);
+                    LoadTarget(7);
+                    break;
+            }
         }
     }
 }

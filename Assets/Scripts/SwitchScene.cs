@@ -3,7 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour
 { 
-    private int actualScene;
+    public int actualScene;
+    public bool init;
 
     public void RemoveScene()
     {
@@ -14,5 +15,7 @@ public class SwitchScene : MonoBehaviour
     {
         SceneManager.LoadScene(scene, LoadSceneMode.Additive);
         actualScene = scene;
+        init = true;
+        init = false;
     }
 }
