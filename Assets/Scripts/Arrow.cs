@@ -8,6 +8,7 @@ public class Arrow : XRGrabInteractable
 
     private new Rigidbody rigidbody;
     private ArrowCaster caster;
+    private TrailRenderer trailsRenderer;
 
     private bool launched = false;
 
@@ -18,6 +19,7 @@ public class Arrow : XRGrabInteractable
         base.Awake();
         rigidbody = GetComponent<Rigidbody>();
         caster = GetComponent<ArrowCaster>();
+        trailsRenderer = GetComponent<TrailRenderer>();
     }
 
     protected override void OnSelectExited(SelectExitEventArgs args)
@@ -34,6 +36,7 @@ public class Arrow : XRGrabInteractable
     private void LaunchArrow(Notch notch)
     {
         launched = true;
+        trailsRenderer.enabled = true;
         ApplyForce(notch.PullMeasurer);
         StartCoroutine(LaunchRoutine());
     }
@@ -78,7 +81,11 @@ public class Arrow : XRGrabInteractable
     private void CheckForHittable(RaycastHit hit)
     {
         if (hit.transform.TryGetComponent(out IArrowHittable hittable))
+        {
             hittable.Hit(this);
+            trailsRenderer.enabled = false;
+        }
+            
     }
 
     public override bool IsSelectableBy(IXRSelectInteractor interactor)
