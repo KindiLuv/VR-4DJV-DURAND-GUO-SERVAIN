@@ -6,11 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private int score;
-    [SerializeField] private TextMeshProUGUI scoreText;
     private SwitchScene switchSceneScript;
-    [SerializeField] private TextMeshProUGUI TargetCounterText;
-    private int TotaltargetNumber;
+    [SerializeField] private TextMeshPro TargetCounterText;
+    private int TotaltargetNumber = 7;
     public int targetNumber = 7;
 
     private IEnumerator Start()
@@ -19,7 +17,6 @@ public class GameManager : MonoBehaviour
         switchSceneScript.ChangeScene(1);
         yield return new WaitUntil( () => switchSceneScript.init);
         LoadTarget(7);
-        syncUI();
     }
 
     public void DecrementTarget()
@@ -27,9 +24,9 @@ public class GameManager : MonoBehaviour
         targetNumber--;
         syncUI();
     }
-    public void syncUI()
+    private void syncUI()
     {
-        TargetCounterText.text = targetNumber.ToString()+"/"+TotaltargetNumber.ToString();
+        TargetCounterText.SetText(targetNumber.ToString()+"/"+TotaltargetNumber.ToString());
     }
 
     public void LoadTarget(int targetNb)
@@ -41,10 +38,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.LogError(targetNumber);
         if (targetNumber == 0)
         {
-            Debug.LogError("target was 0");
             switch (switchSceneScript.actualScene)
             {
                 case 1:

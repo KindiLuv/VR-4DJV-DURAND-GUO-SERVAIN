@@ -16,6 +16,5 @@ public class SwitchScene : MonoBehaviour
         SceneManager.LoadScene(scene, LoadSceneMode.Additive);
         actualScene = scene;
         init = true;
-        init = false;
     }
 }
