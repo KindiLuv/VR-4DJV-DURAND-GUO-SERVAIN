@@ -20,4 +20,11 @@ public class ArcheryTarget : MonoBehaviour
             gameManager.DecrementTarget();
         }
     }
+
+    public void SetHit()
+    {
+        if (hit) return;
+        hit = true;
+        gameManager.DecrementTarget();
+    }
 }
