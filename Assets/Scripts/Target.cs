@@ -4,12 +4,22 @@ public class Target : MonoBehaviour, IArrowHittable
 {
     public float forceAmount = 1.0f;
     public Material otherMaterial = null;
-
+    private GameManager gameManager;
+    public bool hit = false;
+    
+    private void Start()
+    {
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+    }
+    
     public void Hit(Arrow arrow)
     {
-        ApplyMaterial();
+        //ApplyMaterial();
         ApplyForce(arrow);
         DisableCollider(arrow);
+        if (hit) return;
+        hit = true;
+        gameManager.DecrementTarget();
     }
 
     private void ApplyMaterial()

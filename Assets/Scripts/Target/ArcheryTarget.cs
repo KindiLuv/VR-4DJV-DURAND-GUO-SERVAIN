@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider))]
@@ -11,13 +12,15 @@ public class ArcheryTarget : MonoBehaviour
         gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.transform.GetComponent<Arrow>() != null)
         {
             if (hit) return;
             hit = true;
             gameManager.DecrementTarget();
+            //collision.transform.GetComponent<Arrow>().DisablePhysics();
+            
         }
     }
 

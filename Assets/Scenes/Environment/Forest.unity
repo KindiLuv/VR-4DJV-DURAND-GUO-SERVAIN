@@ -217,7 +217,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7242782152647000162, guid: 13a251c2d1ec9b84f94b62e5c92ac48c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13a251c2d1ec9b84f94b62e5c92ac48c, type: 3}
 --- !u!4 &19497999 stripped
 Transform:
@@ -245,6 +246,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 172888458873553249, guid: d1554dad8e83cff44bc6c2b9c28c7a18, type: 3}
+--- !u!114 &19498002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19498000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e106f6721842f4fbabaeb95bc9c7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceAmount: 1
+  otherMaterial: {fileID: 0}
+  hit: 0
 --- !u!1001 &34108880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6193,7 +6209,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1018497846291117052, guid: 50f417d7d9ad5be4d82df5e31dd35ad0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 50f417d7d9ad5be4d82df5e31dd35ad0, type: 3}
 --- !u!4 &1253756114 stripped
 Transform:
@@ -6221,6 +6238,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3906832884256009306, guid: d1554dad8e83cff44bc6c2b9c28c7a18, type: 3}
+--- !u!114 &1253756117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253756115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e106f6721842f4fbabaeb95bc9c7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceAmount: 1
+  otherMaterial: {fileID: 0}
+  hit: 0
 --- !u!1001 &1257199609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6962,7 +6994,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1018497846291117052, guid: 50f417d7d9ad5be4d82df5e31dd35ad0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 50f417d7d9ad5be4d82df5e31dd35ad0, type: 3}
 --- !u!4 &1356488110 stripped
 Transform:
@@ -6990,6 +7023,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3906832884256009306, guid: d1554dad8e83cff44bc6c2b9c28c7a18, type: 3}
+--- !u!114 &1356488113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356488111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e106f6721842f4fbabaeb95bc9c7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceAmount: 1
+  otherMaterial: {fileID: 0}
+  hit: 0
 --- !u!1 &1370476939
 GameObject:
   m_ObjectHideFlags: 0
@@ -8090,7 +8138,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7242782152647000162, guid: 13a251c2d1ec9b84f94b62e5c92ac48c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13a251c2d1ec9b84f94b62e5c92ac48c, type: 3}
 --- !u!4 &1585168522 stripped
 Transform:
@@ -8118,6 +8167,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 172888458873553249, guid: d1554dad8e83cff44bc6c2b9c28c7a18, type: 3}
+--- !u!114 &1585168525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585168523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e106f6721842f4fbabaeb95bc9c7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceAmount: 1
+  otherMaterial: {fileID: 0}
+  hit: 0
 --- !u!1001 &1608796386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10132,7 +10196,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1018497846291117052, guid: 50f417d7d9ad5be4d82df5e31dd35ad0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 50f417d7d9ad5be4d82df5e31dd35ad0, type: 3}
 --- !u!4 &1935786731 stripped
 Transform:
@@ -10160,6 +10225,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3906832884256009306, guid: d1554dad8e83cff44bc6c2b9c28c7a18, type: 3}
+--- !u!114 &1935786734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935786732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e106f6721842f4fbabaeb95bc9c7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceAmount: 1
+  otherMaterial: {fileID: 0}
+  hit: 0
 --- !u!1001 &1939749767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10252,7 +10332,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4620821288582029457, guid: 94e47a740ab8702428178f5464b5f8d5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 94e47a740ab8702428178f5464b5f8d5, type: 3}
 --- !u!4 &1939749768 stripped
 Transform:
@@ -10280,6 +10361,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1818111873101695623, guid: d1554dad8e83cff44bc6c2b9c28c7a18, type: 3}
+--- !u!114 &1939749771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939749769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e106f6721842f4fbabaeb95bc9c7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceAmount: 1
+  otherMaterial: {fileID: 0}
+  hit: 0
 --- !u!1001 &1992955972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10947,7 +11043,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7242782152647000162, guid: 13a251c2d1ec9b84f94b62e5c92ac48c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13a251c2d1ec9b84f94b62e5c92ac48c, type: 3}
 --- !u!4 &2125930787 stripped
 Transform:
@@ -10975,3 +11072,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 172888458873553249, guid: d1554dad8e83cff44bc6c2b9c28c7a18, type: 3}
+--- !u!114 &2125930790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125930788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e106f6721842f4fbabaeb95bc9c7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceAmount: 1
+  otherMaterial: {fileID: 0}
+  hit: 0
