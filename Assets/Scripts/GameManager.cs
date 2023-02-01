@@ -1,33 +1,35 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private int score;
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI TargetCounterText;
+    private int TotaltargetNumber;
+    private int targetNumber;
 
     private void Start()
     {
         SceneManager.LoadScene(1, LoadSceneMode.Additive);
-        resetScore();
-        syncScoreUI();
+        LoadTarget();
+        syncUI();
     }
 
-    public void addScore(int scoreToAdd)
+    public void DecrementTarget()
     {
-        score += scoreToAdd;
-        syncScoreUI();
+        targetNumber--;
+        syncUI();
+    }
+    public void syncUI()
+    {
+        TargetCounterText.text = targetNumber.ToString()+"/"+TotaltargetNumber.ToString();
     }
 
-    public void resetScore()
+    public void LoadTarget()
     {
-        score = 0;
-        syncScoreUI();
-    }
-
-    public void syncScoreUI()
-    {
-        scoreText.text = score.ToString();
+        TotaltargetNumber = FindObjectsOfType<ArcheryTarget>().Length;
+        targetNumber = TotaltargetNumber;
+        syncUI();
     }
 }
