@@ -1,15 +1,20 @@
+using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     private int score;
     [SerializeField] private TextMeshProUGUI scoreText;
+    private SwitchScene switchSceneScript;
+    public bool t;
+    public bool tt;
+    public bool ttt;
 
     private void Start()
     {
-        SceneManager.LoadScene(1, LoadSceneMode.Additive);
+        switchSceneScript = GetComponent<SwitchScene>();
+        switchSceneScript.ChangeScene(1);
         resetScore();
         syncScoreUI();
     }
@@ -29,5 +34,29 @@ public class GameManager : MonoBehaviour
     public void syncScoreUI()
     {
         scoreText.text = score.ToString();
+    }
+
+    private void Update()
+    {
+        if(t)
+        {
+            switchSceneScript.RemoveScene();
+            switchSceneScript.ChangeScene(2);
+            t = false;
+        }
+        
+        if(tt)
+        {
+            switchSceneScript.RemoveScene();
+            switchSceneScript.ChangeScene(3);
+            tt = false;
+        }
+        
+        if(ttt)
+        {
+            switchSceneScript.RemoveScene();
+            switchSceneScript.ChangeScene(4);
+            ttt = false;
+        }
     }
 }
