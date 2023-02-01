@@ -36,7 +36,7 @@ public class Arrow : XRGrabInteractable
     private void LaunchArrow(Notch notch)
     {
         launched = true;
-        trailsRenderer.enabled = true;
+        //trailsRenderer.enabled = true;
         ApplyForce(notch.PullMeasurer);
         StartCoroutine(LaunchRoutine());
     }
@@ -83,7 +83,7 @@ public class Arrow : XRGrabInteractable
         if (hit.transform.TryGetComponent(out IArrowHittable hittable))
         {
             hittable.Hit(this);
-            trailsRenderer.enabled = false;
+            //trailsRenderer.enabled = false;
         }
             
     }

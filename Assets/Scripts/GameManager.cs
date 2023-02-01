@@ -1,33 +1,58 @@
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private int score;
-    [SerializeField] private TextMeshProUGUI scoreText;
+    private SwitchScene switchSceneScript;
+    [SerializeField] private TextMeshPro TargetCounterText;
+    private int TotaltargetNumber = 7;
+    public int targetNumber = 7;
 
-    private void Start()
+    private IEnumerator Start()
     {
-        SceneManager.LoadScene(1, LoadSceneMode.Additive);
-        resetScore();
-        syncScoreUI();
+        switchSceneScript = GetComponent<SwitchScene>();
+        switchSceneScript.ChangeScene(1);
+        yield return new WaitUntil( () => switchSceneScript.init);
+        LoadTarget(7);
     }
 
-    public void addScore(int scoreToAdd)
+    public void DecrementTarget()
     {
-        score += scoreToAdd;
-        syncScoreUI();
+        targetNumber--;
+        syncUI();
+    }
+    private void syncUI()
+    {
+        TargetCounterText.SetText(targetNumber.ToString()+"/"+TotaltargetNumber.ToString());
     }
 
-    public void resetScore()
+    public void LoadTarget(int targetNb)
     {
-        score = 0;
-        syncScoreUI();
+        TotaltargetNumber = targetNb;
+        targetNumber = TotaltargetNumber;
+        syncUI();
     }
 
-    public void syncScoreUI()
+    private void Update()
     {
-        scoreText.text = score.ToString();
+        if (targetNumber == 0)
+        {
+            switch (switchSceneScript.actualScene)
+            {
+                case 1:
+                    switchSceneScript.RemoveScene();
+                    switchSceneScript.ChangeScene(2);
+                    LoadTarget(5);
+                    break;
+                case 2:
+                    switchSceneScript.RemoveScene();
+                    switchSceneScript.ChangeScene(1);
+                    LoadTarget(7);
+                    break;
+            }
+        }
     }
 }
