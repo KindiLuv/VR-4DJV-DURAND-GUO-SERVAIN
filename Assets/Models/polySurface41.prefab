@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3113575329032522876}
   - component: {fileID: 2054855966365691903}
   - component: {fileID: 6551467321013025405}
+  - component: {fileID: -6696147065364488559}
+  - component: {fileID: 1018497846291117052}
   m_Layer: 0
   m_Name: polySurface41
   m_TagString: Untagged
@@ -83,3 +85,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-6696147065364488559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496051955358175083}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40971237, y: 0.4666458, z: 0.20799787}
+  m_Center: {x: 0.000000022351742, y: 0, z: 0}
+--- !u!114 &1018497846291117052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496051955358175083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be2381ef9fc26744ab03d752abf9a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScore: 0
+  isResetTarget: 0
